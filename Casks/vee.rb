@@ -1,6 +1,6 @@
 cask "vee" do
-  version "0.1.13"
-  sha256 "1eb5f609b830833ba092936b35654ab647804caf3e84c57deff352b1203a6c83"
+  version "0.1.20"
+  sha256 "7ea26c1f1f985603e29e93cc044bc298cece7ec056c5e5f586137a28b190ee67"
 
   url "https://github.com/navbytes/vee/releases/download/v#{version}/Vee.zip",
       verified: "github.com/navbytes/vee/"
