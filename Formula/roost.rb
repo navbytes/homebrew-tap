@@ -4,23 +4,23 @@
 class Roost < Formula
   desc "Session-native terminal multiplexer for AI agent CLIs"
   homepage "https://github.com/navbytes/roost"
-  version "0.1.10"
+  version "0.1.11"
   license "MIT"
 
   # `url`/`sha256` aren't permitted inside on_macos/on_linux blocks (brew
   # style: FormulaAudit/ComponentsOrder) — plain OS/CPU conditionals instead.
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-aarch64-apple-darwin.tar.gz"
-    sha256 "ce52ccec96e80e7589d03e9759848477eceed54c945cca4f4eb4d62bb19e1fee"
+    sha256 "c87b222b538a06db17c391d4c8e7e6c8c026cb8e5eca22360e671f65decc4687"
   elsif OS.mac?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-x86_64-apple-darwin.tar.gz"
-    sha256 "07b1c1bfd80efe9ba96b930dbcb90cfa68e6c37f18d8c4b216603212cf741d3d"
+    sha256 "e8572a5617b418a3eb9165bbc9815d4046f6821875984781e5783d0ed22b58e7"
   elsif OS.linux? && Hardware::CPU.arm?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "9b10edc69818eb40efeca167c918c014b93c5017769e0918ef1f6c5d0ad4933a"
+    sha256 "2b3f06d4fefcab6639a8030bb789beb5581e0d2f84857f9c5c8215de914de278"
   elsif OS.linux?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "fc91f359112abc0ea12a23f8d2ca0c8be5a60472af59530303df0905a88844a9"
+    sha256 "f4e749aec1cd7df3c25f120903a231cd13af4a8e4735850fc8abc260444045ad"
   end
 
   def install
