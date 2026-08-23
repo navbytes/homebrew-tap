@@ -1,6 +1,6 @@
 cask "vee" do
-  version "0.1.20"
-  sha256 "7ea26c1f1f985603e29e93cc044bc298cece7ec056c5e5f586137a28b190ee67"
+  version "0.2.0"
+  sha256 "80b1da57aedb4d76f62c455be33a8326447d1c27714e901b6ae4fdc6012d4104"
 
   url "https://github.com/navbytes/vee/releases/download/v#{version}/Vee.zip",
       verified: "github.com/navbytes/vee/"
@@ -18,6 +18,9 @@ cask "vee" do
   depends_on macos: :tahoe
 
   app "Vee.app"
+  # The app bundle's executable is also the `vee` CLI, so one cask delivers
+  # both. Homebrew removes the symlink on uninstall.
+  binary "#{appdir}/Vee.app/Contents/MacOS/Vee", target: "vee"
 
   zap trash: [
     "~/Library/Application Support/Vee",
