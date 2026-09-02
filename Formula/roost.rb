@@ -11,16 +11,16 @@ class Roost < Formula
   # style: FormulaAudit/ComponentsOrder) — plain OS/CPU conditionals instead.
   if OS.mac? && Hardware::CPU.arm?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-aarch64-apple-darwin.tar.gz"
-    sha256 "9cd3a3f2b01d55471a5d49215169d83f563edaaa0a1d8a17a1c55349ba41b980"
+    sha256 "9d5bf7b432d4674aecc7b7c2cf2beaaa5b8afd5251056c61855509175dcb2721"
   elsif OS.mac?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-x86_64-apple-darwin.tar.gz"
-    sha256 "e92369692e12abacd27e9b36c5620c1b56024b4b53291ee2c33db4d63e9a4f02"
+    sha256 "14b4e7c39912e8fecf010da1b5c580dc516de9b9708bc18a654420d4a528bc96"
   elsif OS.linux? && Hardware::CPU.arm?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-aarch64-unknown-linux-gnu.tar.gz"
-    sha256 "e3237b51fbd758bcaaa013b79a5d1e476f3b6ac5b71d5244eb5c29dc8b110b1d"
+    sha256 "4ad97924bbff9d675bd3e3a59e6f04f070f92c55cc1eab1fdf833220c112583e"
   elsif OS.linux?
     url "https://github.com/navbytes/roost/releases/download/v#{version}/roost-#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "dfe025504012934e67f6619d50aa783c117e061b22d7d43020dc40619d236511"
+    sha256 "a6bed249285e00f2ba0971460696670d14256a4dc6e431f35aa9b49bb18a8b96"
   end
 
   def install
