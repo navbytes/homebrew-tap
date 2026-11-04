@@ -1,6 +1,6 @@
 cask "stackbar" do
-  version "0.18.0"
-  sha256 "af319853f956cba66c68ba81175406588076524c0b51b95b89780630773b48d3"
+  version "0.19.0"
+  sha256 "78ff23cd2fa4c96e2b2141985dbb94c7931620e71131365f9fc9a04af8bad9eb"
 
   url "https://github.com/navbytes/stackbar/releases/download/v#{version}/Stackbar-#{version}.zip",
       verified: "github.com/navbytes/stackbar/"
@@ -30,8 +30,8 @@ cask "stackbar" do
   ]
 
   caveats <<~CAVEATS
-    Stackbar compiles plugins on your Mac with Swift. If you have neither
-    Xcode nor the Command Line Tools, install them:
+    Store plugins come prebuilt. To write your own plugins, install Xcode
+    or the Command Line Tools:
       xcode-select --install
   CAVEATS
 end
