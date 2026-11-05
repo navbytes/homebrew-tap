@@ -1,17 +1,20 @@
 cask "stackbar" do
-  version "0.22.0"
-  sha256 "b27cdc707c39bbf2e575d496d09822e915827ab62e4a6b8cea46ae8b3715e7fa"
+  version "0.23.0"
+  sha256 "a50e2cb4f72d4844ff23cc76a7df72f247c4afccad7dc027e33bf564c1b30370"
 
   url "https://github.com/navbytes/stackbar/releases/download/v#{version}/Stackbar-#{version}.zip",
       verified: "github.com/navbytes/stackbar/"
   name "Stackbar"
-  desc "Menu-bar host for live plugins written in Swift"
+  desc "Launcher, menu bar and widgets you extend in Swift"
   homepage "https://stackbar.app/"
 
   livecheck do
     url :url
     strategy :github_releases
   end
+
+  # Stackbar updates itself (Sparkle).
+  auto_updates true
 
   # Apple Silicon + macOS 26 (Tahoe) or later, matching the app.
   depends_on arch: :arm64
