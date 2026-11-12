@@ -1,6 +1,6 @@
 cask "stackbar" do
-  version "0.39.0"
-  sha256 "3c92121799bf04c4b5fb2494825a1706624e700fe5c2c53bbbc8f22e52f7e5e1"
+  version "0.40.1"
+  sha256 "73a57356043e77481a8320ce4f987da1399e0e7c2e2dc5aff1aa1d5a526f72de"
 
   url "https://github.com/navbytes/stackbar/releases/download/v#{version}/Stackbar-#{version}.zip",
       verified: "github.com/navbytes/stackbar/"
